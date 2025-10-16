@@ -1,7 +1,7 @@
 # SNMP Tool - Guide d'utilisation
-
+<img width="200" height="200" alt="{FC578A0E-72A7-4BB8-A800-1EACA1207C68}" src="https://github.com/user-attachments/assets/93ca6ddf-205f-4e3b-bbc2-0e67e682dfc4" />
 Outil Windows pour requêtes SNMP avec scanner réseau intégré.
-<img width="436" height="444" alt="{FC578A0E-72A7-4BB8-A800-1EACA1207C68}" src="https://github.com/user-attachments/assets/93ca6ddf-205f-4e3b-bbc2-0e67e682dfc4" />
+
 
 ## Utilisation rapide
 
