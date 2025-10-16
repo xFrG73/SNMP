@@ -41,7 +41,8 @@ Pour tester localement:
 
 ## Interface
 
-<img width="436" height="444" alt="{FC578A0E-72A7-4BB8-A800-1EACA1207C68}" src="https://github.com/user-attachments/assets/93ca6ddf-205f-4e3b-bbc2-0e67e682dfc4" />
+<img width="400" height="407" alt="{FC578A0E-72A7-4BB8-A800-1EACA1207C68}" src="https://github.com/user-attachments/assets/93ca6ddf-205f-4e3b-bbc2-0e67e682dfc4" />
+<img width="400" height="372" alt="{C4F67D8F-A93F-4DBD-8E5D-A76D52B4F9D5}" src="https://github.com/user-attachments/assets/dcf3ffcf-0362-4e78-9645-5ae8765cb8d7" />
 
 ## Exemples
 
