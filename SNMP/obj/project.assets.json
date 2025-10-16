@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Lextm.SharpSnmpLib/12.5.6": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/SharpSnmpLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SharpSnmpLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lextm.SharpSnmpLib/12.5.6": {
+      "sha512": "VBNu75gmpoP7NF83QqqKWHKa+2pMG4dJV4fotvFL1HniWpvDy845psNu2cLBoihvq+CEtIHiyRYiKnUzm7c+Ew==",
+      "type": "package",
+      "path": "lextm.sharpsnmplib/12.5.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lextm.sharpsnmplib.12.5.6.nupkg.sha512",
+        "lextm.sharpsnmplib.nuspec",
+        "lib/net471/SharpSnmpLib.dll",
+        "lib/net471/SharpSnmpLib.pdb",
+        "lib/net471/SharpSnmpLib.xml",
+        "lib/net8.0/SharpSnmpLib.dll",
+        "lib/net8.0/SharpSnmpLib.pdb",
+        "lib/net8.0/SharpSnmpLib.xml",
+        "readme.md"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Lextm.SharpSnmpLib >= 12.5.6"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Pierre\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMP.csproj",
+      "projectName": "SNMP TOOL",
+      "projectPath": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMP.csproj",
+      "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Pierre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Lextm.SharpSnmpLib": {
+            "target": "Package",
+            "version": "[12.5.6, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

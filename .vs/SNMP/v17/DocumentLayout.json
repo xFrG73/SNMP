@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pierre\\Documents\\SNMP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\snmptool.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\snmptool.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 113,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{11a62471-a78f-4a09-bfee-89cb730390b6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cbbbe9c2-6596-44fe-8a27-b376e5eed04d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NetworkScannerForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.Designer.cs",
+              "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.Designer.cs",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.Designer.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAewHoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T09:52:26.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NetworkScannerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
+              "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAqwLkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T09:39:44.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NetworkScannerForm.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
+              "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs [Conception]",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T09:33:08.966Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SNMPTool.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs",
+              "RelativeDocumentMoniker": "SNMP\\SNMPTool.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs [Conception]",
+              "RelativeToolTip": "SNMP\\SNMPTool.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:27:31.664Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SNMPTool.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.Designer.cs",
+              "RelativeDocumentMoniker": "SNMP\\SNMPTool.Designer.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.Designer.cs",
+              "RelativeToolTip": "SNMP\\SNMPTool.Designer.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwEgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T08:27:08.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "SNMP\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\Properties\\Resources.resx",
+              "RelativeToolTip": "SNMP\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-16T08:20:20.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SNMPTool.cs",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs",
+              "RelativeDocumentMoniker": "SNMP\\SNMPTool.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs",
+              "RelativeToolTip": "SNMP\\SNMPTool.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAqwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T07:51:40.067Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
