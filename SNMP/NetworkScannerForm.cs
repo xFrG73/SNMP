@@ -42,7 +42,6 @@ namespace SNMP
             }
             catch
             {
-                // Garder la valeur par défaut si erreur
             }
         }
 
@@ -50,7 +49,6 @@ namespace SNMP
         {
             try
             {
-                // Méthode plus fiable pour obtenir l'IP locale
                 using var socket = new System.Net.Sockets.Socket(System.Net.Sockets.AddressFamily.InterNetwork,
                     System.Net.Sockets.SocketType.Dgram, 0);
                 socket.Connect("8.8.8.8", 65530);
@@ -59,7 +57,6 @@ namespace SNMP
             }
             catch
             {
-                // Fallback vers l'ancienne méthode
                 var host = Dns.GetHostEntry(Dns.GetHostName());
                 foreach (var ip in host.AddressList)
                 {
@@ -134,7 +131,7 @@ namespace SNMP
             progressBarScan.Value = 0;
 
             var tasks = new List<Task>();
-            var semaphore = new SemaphoreSlim(10); // 10 scans simultanés
+            var semaphore = new SemaphoreSlim(10);
 
             for (int i = startInt; i <= endInt; i++)
             {
@@ -146,7 +143,6 @@ namespace SNMP
 
                 tasks.Add(ScanSingleIP(currentIP, semaphore, cancellationToken));
 
-                // Petite pause pour éviter la surcharge
                 if (tasks.Count % 50 == 0)
                 {
                     await Task.Delay(10, cancellationToken);
@@ -179,7 +175,6 @@ namespace SNMP
 
             try
             {
-                // Éviter de surcharger l'UI
                 if (progressBarScan.Value % 10 == 0)
                 {
                     this.Invoke(() =>
@@ -193,7 +188,6 @@ namespace SNMP
                     progressBarScan.Value++;
                 });
 
-                // Test SNMP directement (certains périphériques ne répondent pas au ping)
                 var snmpResult = await TestSNMP(ip, cancellationToken);
                 if (!string.IsNullOrEmpty(snmpResult))
                 {
@@ -210,12 +204,10 @@ namespace SNMP
             }
             catch (OperationCanceledException)
             {
-                // Scan annulé
                 throw;
             }
             catch (Exception)
             {
-                // Ignorer les autres erreurs pour continuer le scan
             }
             finally
             {
@@ -225,40 +217,44 @@ namespace SNMP
 
         private async Task<string> TestSNMP(IPAddress ip, CancellationToken cancellationToken)
         {
-            try
+            string[] communities = { "public", "private", "snmptool", "community" };
+
+            foreach (var communityStr in communities)
             {
-                var endpoint = new IPEndPoint(ip, 161);
-                var community = new OctetString("public");
-                var oid = new ObjectIdentifier("1.3.6.1.2.1.1.1.0"); // System description
-
-                using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-                cts.CancelAfter(1500); // Timeout réduit à 1.5 secondes
-
-                var result = await Messenger.GetAsync(VersionCode.V2, endpoint, community,
-                    new List<Variable> { new Variable(oid) }, cts.Token);
-
-                if (result.Count > 0)
+                try
                 {
-                    var description = result[0].Data.ToString();
+                    var endpoint = new IPEndPoint(ip, 161);
+                    var community = new OctetString(communityStr);
+                    var oid = new ObjectIdentifier("1.3.6.1.2.1.1.1.0");
 
-                    // Vérifier si c'est une vraie réponse SNMP
-                    if (!string.IsNullOrEmpty(description) &&
-                        !description.Contains("NoSuchObject") &&
-                        !description.Contains("noSuchObject"))
+                    using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+                    cts.CancelAfter(2000);
+
+                    var result = await Messenger.GetAsync(VersionCode.V2, endpoint, community,
+                        new List<Variable> { new Variable(oid) }, cts.Token);
+
+                    if (result.Count > 0)
                     {
-                        return description.Length > 100 ? description.Substring(0, 100) + "..." : description;
+                        var description = result[0].Data.ToString();
+
+                        if (!string.IsNullOrEmpty(description) &&
+                            !description.Contains("NoSuchObject") &&
+                            !description.Contains("noSuchObject") &&
+                            !description.Contains("NoSuchInstance"))
+                        {
+                            var finalDesc = description.Length > 80 ? description.Substring(0, 80) + "..." : description;
+                            return $"{finalDesc} (community: {communityStr})";
+                        }
                     }
                 }
-            }
-            catch (OperationCanceledException)
-            {
-                // Timeout ou annulation
-                return "";
-            }
-            catch (Exception)
-            {
-                // Autres erreurs SNMP
-                return "";
+                catch (OperationCanceledException)
+                {
+                    continue;
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
             }
 
             return "";
@@ -270,7 +266,7 @@ namespace SNMP
             {
                 using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(2));
                 var hostEntry = await Dns.GetHostEntryAsync(ip).WaitAsync(cts.Token);
-                return hostEntry.HostName.Split('.')[0]; // Prendre seulement le nom court
+                return hostEntry.HostName.Split('.')[0];
             }
             catch
             {
@@ -300,9 +296,5 @@ namespace SNMP
             Close();
         }
 
-        private void buttonStartScan_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -67,7 +67,7 @@ namespace SNMP
             buttonStartScan.TabIndex = 2;
             buttonStartScan.Text = "Scanner";
             buttonStartScan.UseVisualStyleBackColor = true;
-            buttonStartScan.Click += buttonStartScan_Click_1;
+            buttonStartScan.Click += ButtonStartScan_Click;
             // 
             // progressBarScan
             // 

@@ -17,3 +17,4 @@ C:\Users\Pierre\Documents\SNMP\SNMP\obj\Debug\net8.0-windows\SNMP.genruntimeconf
 C:\Users\Pierre\Documents\SNMP\SNMP\obj\Debug\net8.0-windows\ref\SNMP.dll
 C:\Users\Pierre\Documents\SNMP\SNMP\obj\Debug\net8.0-windows\SNMP.SNMPTool.resources
 C:\Users\Pierre\Documents\SNMP\SNMP\obj\Debug\net8.0-windows\SNMP.NetworkScannerForm.resources
+C:\Users\Pierre\Documents\SNMP\SNMP\obj\Debug\net8.0-windows\SNMP.sourcelink.json

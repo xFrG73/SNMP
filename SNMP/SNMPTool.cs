@@ -8,26 +8,19 @@ namespace SNMP
     {
         private Dictionary<string, string> predefinedOids = new Dictionary<string, string>
         {
-            // === SYSTÈME WINDOWS ===
             { "Description du système", "1.3.6.1.2.1.1.1.0" },
             { "Nom de l'ordinateur", "1.3.6.1.2.1.1.5.0" },
             { "Temps de fonctionnement", "1.3.6.1.2.1.1.3.0" },
             { "Contact", "1.3.6.1.2.1.1.4.0" },
             { "Localisation", "1.3.6.1.2.1.1.6.0" },
             { "──── MÉMOIRE ────", "" },
-                       
-            // === MÉMOIRE WINDOWS ===
             { "Mémoire physique totale", "1.3.6.1.2.1.25.2.2.0" },
             { "──── DISQUES ────", "" },
-            
-            // === DISQUES WINDOWS ===
             { "Disque C: - Taille totale", "1.3.6.1.2.1.25.2.3.1.5.1" },
             { "Disque C: - Espace utilisé", "1.3.6.1.2.1.25.2.3.1.6.1" },
             { "Disque C: - Type système fichiers", "1.3.6.1.2.1.25.2.3.1.3.1" },
             { "Disque C: - Unité allocation", "1.3.6.1.2.1.25.2.3.1.4.1" },
             { "──── RÉSEAU ────", "" },
-            
-            // === RÉSEAU WINDOWS ===
             { "Nombre d'interfaces réseau", "1.3.6.1.2.1.2.1.0" },
             { "Interface 1 - Description", "1.3.6.1.2.1.2.2.1.2.1" },
             { "Interface 1 - Vitesse", "1.3.6.1.2.1.2.2.1.5.1" },
@@ -35,8 +28,6 @@ namespace SNMP
             { "Interface 1 - Octets reçus", "1.3.6.1.2.1.2.2.1.10.1" },
             { "Interface 1 - Octets envoyés", "1.3.6.1.2.1.2.2.1.16.1" },
             { "──── SERVICES ────", "" },
-            
-            // === SERVICES WINDOWS ===
             { "Nombre de processus", "1.3.6.1.2.1.25.1.6.0" },
         };
 
@@ -74,7 +65,6 @@ namespace SNMP
                 }
                 else if (selectedKey.Contains("────"))
                 {
-                    // Ignorer les séparateurs - ne pas changer l'OID
                 }
             }
         }
@@ -93,25 +83,24 @@ namespace SNMP
                 var variable = result[0];
                 string resultValue = variable.Data.ToString();
 
-                // Gérer les différents types d'erreurs SNMP
                 if (resultValue.Contains("NoSuchObject") || resultValue.Contains("noSuchObject"))
                 {
-                    resultValue = "❌ OID non supporté par cet équipement";
+                    resultValue = "OID non supporté par cet équipement";
                 }
                 else if (resultValue.Contains("NoSuchInstance") || resultValue.Contains("noSuchInstance"))
                 {
-                    resultValue = "❌ Instance inexistante";
+                    resultValue = "Instance inexistante";
                 }
                 else if (resultValue.Contains("EndOfMibView") || resultValue.Contains("endOfMibView"))
                 {
-                    resultValue = "❌ Fin de la table MIB";
+                    resultValue = "Fin de la table MIB";
                 }
 
                 AddResultToList(variable.Id.ToString(), resultValue);
             }
             else
             {
-                AddResultToList(textBoxOID.Text, "❌ Aucune réponse");
+                AddResultToList(textBoxOID.Text, "Aucune réponse");
             }
         }
 
