@@ -38,6 +38,10 @@ Pour tester localement:
 - **OID non supporté**: L'OID n'existe pas sur ce périphérique
 - **Aucune réponse**: Vérifier l'IP et la connectivité réseau
 
+## Interface
+
+<img width="436" height="444" alt="{FC578A0E-72A7-4BB8-A800-1EACA1207C68}" src="https://github.com/user-attachments/assets/93ca6ddf-205f-4e3b-bbc2-0e67e682dfc4" />
+
 ## Exemples
 
 **Test local**: IP=127.0.0.1, OID="Description du système"
