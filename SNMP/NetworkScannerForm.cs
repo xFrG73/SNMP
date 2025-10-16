@@ -110,6 +110,10 @@ namespace SNMP
             {
                 labelStatus.Text = "Scan annulé";
             }
+            catch (Exception ex)
+            {
+                labelStatus.Text = $"Erreur de scan: {ex.Message}";
+            }
             finally
             {
                 _cancellationTokenSource = null;
@@ -120,93 +124,79 @@ namespace SNMP
 
         private async Task ScanNetwork(IPAddress startIP, IPAddress endIP, CancellationToken cancellationToken)
         {
-            var startBytes = startIP.GetAddressBytes();
-            var endBytes = endIP.GetAddressBytes();
-
-            var startInt = BitConverter.ToInt32(startBytes.Reverse().ToArray(), 0);
-            var endInt = BitConverter.ToInt32(endBytes.Reverse().ToArray(), 0);
-
-            var totalIPs = endInt - startInt + 1;
-            progressBarScan.Maximum = totalIPs;
+            var ips = GenerateIPRange(startIP, endIP);
+            progressBarScan.Maximum = ips.Count;
             progressBarScan.Value = 0;
 
             var tasks = new List<Task>();
-            var semaphore = new SemaphoreSlim(10);
+            var semaphore = new SemaphoreSlim(20);
 
-            for (int i = startInt; i <= endInt; i++)
+            foreach (var ip in ips)
             {
                 if (cancellationToken.IsCancellationRequested)
                     break;
 
-                var ipBytes = BitConverter.GetBytes(i).Reverse().ToArray();
-                var currentIP = new IPAddress(ipBytes);
-
-                tasks.Add(ScanSingleIP(currentIP, semaphore, cancellationToken));
-
-                if (tasks.Count % 50 == 0)
-                {
-                    await Task.Delay(10, cancellationToken);
-                }
+                tasks.Add(ScanSingleIP(ip, semaphore));
             }
 
-            try
+            await Task.WhenAll(tasks);
+
+            this.Invoke(() =>
             {
-                await Task.WhenAll(tasks);
-            }
-            catch (Exception ex)
-            {
-                this.Invoke(() =>
-                {
-                    labelStatus.Text = $"Erreur lors du scan: {ex.Message}";
-                });
-            }
-            finally
-            {
-                this.Invoke(() =>
-                {
-                    labelStatus.Text = $"Scan terminé - {listViewDevices.Items.Count} périphériques SNMP trouvés";
-                });
-            }
+                labelStatus.Text = $"Scan terminé - {listViewDevices.Items.Count} périphériques trouvés";
+            });
         }
 
-        private async Task ScanSingleIP(IPAddress ip, SemaphoreSlim semaphore, CancellationToken cancellationToken)
+        private List<IPAddress> GenerateIPRange(IPAddress startIP, IPAddress endIP)
         {
-            await semaphore.WaitAsync(cancellationToken);
+            var ips = new List<IPAddress>();
+            var startBytes = startIP.GetAddressBytes();
+            var endBytes = endIP.GetAddressBytes();
+
+            for (int a = startBytes[0]; a <= endBytes[0]; a++)
+            {
+                for (int b = startBytes[1]; b <= endBytes[1]; b++)
+                {
+                    for (int c = startBytes[2]; c <= endBytes[2]; c++)
+                    {
+                        for (int d = startBytes[3]; d <= endBytes[3]; d++)
+                        {
+                            ips.Add(new IPAddress(new byte[] { (byte)a, (byte)b, (byte)c, (byte)d }));
+                        }
+                    }
+                }
+            }
+            return ips;
+        }
+
+        private async Task ScanSingleIP(IPAddress ip, SemaphoreSlim semaphore)
+        {
+            await semaphore.WaitAsync();
 
             try
             {
-                if (progressBarScan.Value % 10 == 0)
-                {
-                    this.Invoke(() =>
-                    {
-                        labelStatus.Text = $"Scan de {ip}...";
-                    });
-                }
-
                 this.Invoke(() =>
                 {
                     progressBarScan.Value++;
+                    if (progressBarScan.Value % 20 == 0)
+                    {
+                        labelStatus.Text = $"Scan {ip} ({progressBarScan.Value}/{progressBarScan.Maximum})";
+                    }
                 });
 
-                var snmpResult = await TestSNMP(ip, cancellationToken);
+                var snmpResult = await TestSNMP(ip);
                 if (!string.IsNullOrEmpty(snmpResult))
                 {
-                    var hostname = await GetHostname(ip);
-
                     this.Invoke(() =>
                     {
                         var item = new ListViewItem(ip.ToString());
-                        item.SubItems.Add(hostname);
+                        item.SubItems.Add("Détecté");
                         item.SubItems.Add(snmpResult);
                         listViewDevices.Items.Add(item);
                     });
                 }
             }
-            catch (OperationCanceledException)
-            {
-                throw;
-            }
-            catch (Exception)
+            catch
             {
             }
             finally
@@ -215,64 +205,36 @@ namespace SNMP
             }
         }
 
-        private async Task<string> TestSNMP(IPAddress ip, CancellationToken cancellationToken)
+        private async Task<string> TestSNMP(IPAddress ip)
         {
-            string[] communities = { "public", "private", "snmptool", "community" };
-
-            foreach (var communityStr in communities)
+            try
             {
-                try
+                var endpoint = new IPEndPoint(ip, 161);
+                var community = new OctetString("public");
+                var oid = new ObjectIdentifier("1.3.6.1.2.1.1.1.0");
+
+                using var cts = new CancellationTokenSource();
+                cts.CancelAfter(1000);
+
+                var result = await Messenger.GetAsync(VersionCode.V2, endpoint, community,
+                    new List<Variable> { new Variable(oid) }, cts.Token);
+
+                if (result.Count > 0)
                 {
-                    var endpoint = new IPEndPoint(ip, 161);
-                    var community = new OctetString(communityStr);
-                    var oid = new ObjectIdentifier("1.3.6.1.2.1.1.1.0");
-
-                    using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-                    cts.CancelAfter(2000);
-
-                    var result = await Messenger.GetAsync(VersionCode.V2, endpoint, community,
-                        new List<Variable> { new Variable(oid) }, cts.Token);
-
-                    if (result.Count > 0)
+                    var description = result[0].Data.ToString();
+                    if (!string.IsNullOrEmpty(description) && !description.Contains("NoSuch"))
                     {
-                        var description = result[0].Data.ToString();
-
-                        if (!string.IsNullOrEmpty(description) &&
-                            !description.Contains("NoSuchObject") &&
-                            !description.Contains("noSuchObject") &&
-                            !description.Contains("NoSuchInstance"))
-                        {
-                            var finalDesc = description.Length > 80 ? description.Substring(0, 80) + "..." : description;
-                            return $"{finalDesc} (community: {communityStr})";
-                        }
+                        return description.Length > 50 ? description.Substring(0, 50) + "..." : description;
                     }
                 }
-                catch (OperationCanceledException)
-                {
-                    continue;
-                }
-                catch (Exception)
-                {
-                    continue;
-                }
+            }
+            catch
+            {
             }
 
             return "";
         }
 
-        private async Task<string> GetHostname(IPAddress ip)
-        {
-            try
-            {
-                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(2));
-                var hostEntry = await Dns.GetHostEntryAsync(ip).WaitAsync(cts.Token);
-                return hostEntry.HostName.Split('.')[0];
-            }
-            catch
-            {
-                return "Inconnu";
-            }
-        }
 
         private void ListViewDevices_SelectedIndexChanged(object? sender, EventArgs e)
         {

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Pierre\\Documents\\SNMP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\snmptool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|solutionrelative:snmp\\networkscannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CD227D-C692-4F2E-9DB6-FCA2844E8AC7}|SNMP\\SNMP.csproj|c:\\users\\pierre\\documents\\snmp\\snmp\\snmptool.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,24 +63,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NetworkScannerForm.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
+              "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs [Conception]*",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs [Conception]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T11:37:56.043Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NetworkScannerForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.Designer.cs",
               "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.Designer.cs",
-              "RelativeToolTip": "SNMP\\NetworkScannerForm.Designer.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAewHoAAAA4AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.Designer.cs*",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.Designer.cs*",
+              "ViewState": "AgIAAEMAAAC0yszMzEwcwHoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T09:52:26.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NetworkScannerForm.cs",
               "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
               "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.cs",
-              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
-              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs*",
+              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs*",
               "ViewState": "AgIAABcBAAAAAAAAAAAqwLkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T09:39:44.506Z",
@@ -88,24 +100,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NetworkScannerForm.cs [Conception]",
-              "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs",
-              "RelativeDocumentMoniker": "SNMP\\NetworkScannerForm.cs",
-              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\NetworkScannerForm.cs [Conception]",
-              "RelativeToolTip": "SNMP\\NetworkScannerForm.cs [Conception]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T09:33:08.966Z",
-              "EditorCaption": " [Conception]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "SNMPTool.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs",
               "RelativeDocumentMoniker": "SNMP\\SNMPTool.cs",
-              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs [Conception]",
-              "RelativeToolTip": "SNMP\\SNMPTool.cs [Conception]",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.cs [Conception]*",
+              "RelativeToolTip": "SNMP\\SNMPTool.cs [Conception]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:27:31.664Z",
               "EditorCaption": " [Conception]"
@@ -116,8 +116,8 @@
               "Title": "SNMPTool.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.Designer.cs",
               "RelativeDocumentMoniker": "SNMP\\SNMPTool.Designer.cs",
-              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.Designer.cs",
-              "RelativeToolTip": "SNMP\\SNMPTool.Designer.cs",
+              "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\SNMPTool.Designer.cs*",
+              "RelativeToolTip": "SNMP\\SNMPTool.Designer.cs*",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwEgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:27:08.702Z",
@@ -132,8 +132,7 @@
               "ToolTip": "C:\\Users\\Pierre\\Documents\\SNMP\\SNMP\\Properties\\Resources.resx",
               "RelativeToolTip": "SNMP\\Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-10-16T08:20:20.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T08:20:20.331Z"
             },
             {
               "$type": "Document",
@@ -145,8 +144,7 @@
               "RelativeToolTip": "SNMP\\SNMPTool.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAqwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:51:40.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T07:51:40.067Z"
             }
           ]
         }

@@ -167,8 +167,8 @@
             // 
             // SNMPTool
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.HighlightText;
             ClientSize = new Size(438, 414);
             Controls.Add(label2);
@@ -177,7 +177,9 @@
             Controls.Add(panelMain);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "SNMPTool";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SNMP TOOL";
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
